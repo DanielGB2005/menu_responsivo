@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+nav{
+    display:flex; /* para o logo e os links estarem lado a lado */
+    justify-content: space-around;  /* espaço ao redor = a metade do espaço entre eles */
+    align-items: center;
+    background-color: #23232e;
+    height: 8vh;  /* vh é uma unidade responsiva (se adapta à altura da janela de visualização */
+    /* 100vh cobre a janela inteira */
+}
+
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 30px;
+}
+
+.mobile-menu{
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu div{
+    width: 28px;
+    height: 2px;
+    background-color: white;
+    margin: 8px;
+}
+
+@media (max-width: 999px){
+
+    .nav-list{
+      display: none;  
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background-color: #23232e;
+      flex-direction: column; /* para colocar os links em coluna mudando o flex */
+    }
+
+    .nav-list li{
+        margin-top: 5vh;
+        margin-bottom: 10vh;
+    }
+
+    .mobile-menu{
+        display:block;
+    }
+
+}
